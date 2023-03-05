@@ -1,6 +1,6 @@
 {
   "name": "blsco",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Commit cli, help you to create a commit message with a nice format",
   "main": "src/index.js",
   "type": "module",
