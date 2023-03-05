@@ -1,0 +1,29 @@
+{
+  "name": "blsco",
+  "version": "1.0.0",
+  "description": "Commit cli, help you to create a commit message with a nice format",
+  "main": "src/index.js",
+  "type": "module",
+  "bin": {
+    "blsco": "./src/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "co": "blsco",
+    "start": "node ./src/index.js",
+    "debug": "node --inspect ./src/index.js"
+  },
+  "author": "Carlos Balsalobre Orenes",
+  "license": "ISC",
+  "dependencies": {
+    "@clack/prompts": "0.6.1",
+    "picocolors": "1.0.0"
+  },
+  "devDependencies": {
+    "blsco": "file://.",
+    "standard": "17.0.0"
+  },
+  "eslintConfig": {
+    "extends": "standard"
+  }
+}
