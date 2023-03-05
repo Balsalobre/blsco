@@ -20,3 +20,9 @@ Help you to create a commit message with a nice format.
 │  ○ 💄 style    · Improve styling
 ```
 
+## Publish a new version
+
+```bash
+  npm version patch
+  npm publish
+```
