@@ -15,7 +15,7 @@ if (stagedFiles.length === 0 && changedFiles.length > 0) {
     message: colors.cyan(`You have not staged any files. Select the files you want to stage
     (Press ${colors.bold('Space')} to select, ${colors.bold('Enter')} to confirm)`),
     options: [
-      { label: 'All files', value: '-A' },
+      { label: colors.bold('All files'), value: '-A' },
       ...changedFiles.map(file => ({
         label: file,
         value: file

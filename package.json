@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "type": "module",
   "bin": {
-    "blsco": "./src/index.js"
+    "blsco": "./src/bin.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
