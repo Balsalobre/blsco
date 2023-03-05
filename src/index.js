@@ -74,4 +74,4 @@ console.log({ commit })
 
 await gitCommit({ commit })
 
-outro(colors.green('Commit successful! Thanks for using this assistant!'))
+outro(colors.green('✔️ Commit successful! Thanks for using this assistant!'))
