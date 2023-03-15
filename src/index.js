@@ -52,7 +52,7 @@ const commitMessage = await text({
 })
 
 const branchName = await getBranchName()
-console.log({ branchName })
+console.log('>>', { branchName })
 const { emoji } = COMMIT_TYPES[commitType]
 const commit = `${emoji} ${commitType} ${commitMessage}`
 
