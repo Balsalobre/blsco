@@ -1,7 +1,7 @@
 import { intro, outro, select, confirm, text, multiselect, isCancel } from '@clack/prompts'
 import colors from 'picocolors'
 
-import { exitProgram } from './utils.js'
+import { exitProgram, getJiraTask } from './utils.js'
 import { COMMIT_TYPES } from './commit-types.js'
 import { getChangedFiles, getStagedFiles, getBranchName, gitCommit, gitAdd } from './git.js'
 
@@ -50,11 +50,13 @@ const commitMessage = await text({
     }
   }
 })
+if (isCancel(commitMessage)) exitProgram()
 
 const branchName = await getBranchName()
-console.log('>>', { branchName })
+const jiraTask = getJiraTask(branchName)
+
 const { emoji } = COMMIT_TYPES[commitType]
-const commit = `${emoji} ${commitType} ${commitMessage}`
+const commit = `${jiraTask} ${emoji} ${commitType}: ${commitMessage}`
 
 const commitConfirmation = await confirm({
   initialValue: true,
